@@ -7,11 +7,13 @@
   "author": "Salvatore Laisa <salvatore.laisa@mohole.it>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --hot",
-    "build": "NODE_ENV=production webpack"
+    "start": "NODE_ENV=development webpack-dev-server --hot",
+    "build": "NODE_ENV=production webpack",
+    "gh:pages": "npm run build && gh-pages -d ./dist"
   },
   "devDependencies": {
     "css-loader": "^0.28.11",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
@@ -22,6 +24,6 @@
     "webpack-notifier": "^1.6.0"
   },
   "dependencies": {
-    "bootstrap": "4"
+    "bootstrap": "4.0.0"
   }
 }

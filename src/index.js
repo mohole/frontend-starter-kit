@@ -1,4 +1,4 @@
 
 import './styles/main.scss';
 
-console.log('Project started...')
+console.log('Project started!')
