@@ -7,7 +7,7 @@ const pkg = require('./package.json');
 // Project related settings
 const ENV = process.env.NODE_ENV || 'development';
 const dist = './dist';
-const port = 8090;
+const port = 8080;
 
 // Webpack configuration | DON'T CHANGE
 module.exports = {

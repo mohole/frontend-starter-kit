@@ -1,7 +1,7 @@
 {
   "name": "frontend-starter-kit",
   "displayName": "Mohole frontend starter kit",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "src/index.js",
   "repository": "https://github.com/mohole/frontend-starter-kit",
   "author": "Salvatore Laisa <salvatore.laisa@mohole.it>",
@@ -12,18 +12,18 @@
     "gh:pages": "npm run build && gh-pages -d ./dist"
   },
   "devDependencies": {
-    "css-loader": "^0.28.11",
-    "gh-pages": "^1.1.0",
-    "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.8.3",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14",
-    "webpack-dev-server": "^3.1.1",
-    "webpack-notifier": "^1.6.0"
+    "css-loader": "3.6.0",
+    "gh-pages": "3.1.0",
+    "html-webpack-plugin": "4.3.0",
+    "node-sass": "4.14.1",
+    "sass-loader": "8.0.2",
+    "style-loader": "1.2.1",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0",
+    "webpack-notifier": "1.8.0"
   },
   "dependencies": {
-    "bootstrap": "4.0.0"
+    "bootstrap": "5.0.0-alpha1"
   }
 }
