@@ -23,7 +23,7 @@ This will start a `webpack-dev-server` instance in `hot-reload` mode (*this will
 
 To create the optimized files to publish to whaterver static hosting you choose, just run:
 ```bash
-npm build
+npm run build
 ```
 
 the result will be available in the `./dist` folder.
