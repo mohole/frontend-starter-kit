@@ -1,5 +1,5 @@
 # frontend-starter-kit
-> Simple starter kit boilerplate based on Webpack, SASS and Bootstrap 5 (alpha)
+> Simple starter kit boilerplate based on Webpack, SASS and Bootstrap 5 (beta)
 
 ## How to use
 Just clone the project in a new folder:
