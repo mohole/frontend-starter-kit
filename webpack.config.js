@@ -2,14 +2,32 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const pkg = require('./package.json');
 
 // Project related settings
 const ENV = process.env.NODE_ENV || 'development';
 const dist = './dist';
 const port = 8080;
+const notifications = false;
 
 // Webpack configuration | DON'T CHANGE
+const plugins = [
+  new MiniCssExtractPlugin({
+    filename: "[name].css",
+  }),
+  new HtmlWebpackPlugin({
+    title: pkg.displayName,
+    template: './src/html/index.html'
+  })
+];
+
+notifications ? plugins.push(
+  new WebpackNotifierPlugin({
+    title: pkg.displayName,
+    alwaysNotify: true
+  })) : plugins;
+
 module.exports = {
   entry: {
     main: './src/index.js'
@@ -20,36 +38,24 @@ module.exports = {
     filename: 'bundle.js',
     chunkFilename: 'bundle.[chunk].js'
   },
-  plugins: [
-    new WebpackNotifierPlugin({
-      title: pkg.displayName,
-      alwaysNotify: true
-    }),
-    new HtmlWebpackPlugin({
-      title: pkg.displayName,
-      template: './src/html/index.html'
-    })
-  ],
+  plugins,
   devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [{
-          loader: "style-loader" // creates style nodes from JS strings
-        }, {
-          loader: "css-loader" // translates CSS into CommonJS
-        }]
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader' }
+        ]
       },
       {
         test: /\.scss$/,
-        use: [{
-          loader: "style-loader" // creates style nodes from JS strings
-        }, {
-          loader: "css-loader" // translates CSS into CommonJS
-        }, {
-          loader: "sass-loader" // compiles Sass to CSS
-        }]
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+        ]
       }
     ]
   },

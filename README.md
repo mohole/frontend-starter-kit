@@ -28,19 +28,19 @@ npm run build
 
 the result will be available in the `./dist` folder.
 
-## Customizzazioni
-Per cambiare il titolo delle notifiche e della pagina, modificare il campo `displayName` nel file `package.json`:
+## Customizations
+To update the page title edit the `displayName` filed in the `package.json` file:
 
 ```json
  "displayName": "Mohole frontend starter kit",
 ```
 
-per modificare la porta su cui avviare il dev-server di Webpack e la cartella in cui generare i file pubblicabili, basta modificare le relative costanti nel file `webpack.config.js`:
+to change the port to expose the project and the folder to build to just update the related constants in the `webpack.config.js` file:
 
 ```javascript
 const dist = './dist';
 const port = 8080;
 ```
 
-## Licenza
-Release under the [MIT license](LICENSE).
+## License
+Released under the [MIT license](LICENSE).
