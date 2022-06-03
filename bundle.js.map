@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack://frontend-starter-kit/./src/index.js"],"names":["console","log"],"mappings":"mBAGAA,QAAQC,IAAI,qB","file":"bundle.js","sourcesContent":["\nimport './styles/main.scss';\n\nconsole.log('Project started!')"],"sourceRoot":""}
+{"version":3,"file":"bundle.js","mappings":"mBAGAA,QAAQC,IAAI,qB","sources":["webpack://frontend-starter-kit/./src/index.js"],"sourcesContent":["\nimport './styles/main.scss';\n\nconsole.log('Project started!')"],"names":["console","log"],"sourceRoot":""}
